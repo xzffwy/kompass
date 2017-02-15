@@ -45,7 +45,7 @@ fancybox: true
 # theme styling
 # color: Default | Mint Green | Cobalt Blue | Hot Pink | Dark Violet
 theme:
-  color: Mint Green
+  color: Default
 
 # ===========================================
 # Social links Settings
