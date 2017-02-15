@@ -1,0 +1,110 @@
+// ==============================
+// Post content
+// ==============================
+
+.post-content {
+  @for $i from 1 through 6 {
+    h#{$i} {
+      font-weight: bold;
+      line-height: 1.225;
+      font-family: $global-serif-font-family;
+    }
+  }
+
+  .headerlink {
+    &:hover {
+      border-bottom: 0;
+    }
+
+    &::before {
+      //content: $content-headings-anchor;
+      //margin-right: 5px;
+      //font-size: 1.1em;
+      color: $theme-color;
+    }
+  }
+
+  a {
+    color: $theme-color;
+    word-break: break-all;
+
+    &:hover {
+      border-bottom: $content-link-border;
+    }
+
+    &.fancybox {
+      border: 0;
+    }
+  }
+
+  blockquote {
+    margin: 2em 0;
+    padding: 10px 20px;
+    position: relative;
+    color: rgba(#34495e, 0.8);
+    //background-color: $content-blockquote-backgroud;
+    background-color:#f8f8f8;
+    //border-left: $content-blockquote-border-left;
+    border-left: 3px solid #cacaca;
+    //border-left: #cacaca;
+    //box-shadow: 1px 1px 2px rgba(0,0,0,0.125);
+
+    p {
+      margin: 0;
+    }
+  }
+
+  img {
+    display: inline-block;
+    max-width: 100%;
+  }
+
+  > table {
+  
+    width: 100%;
+    margin: 10px 0;
+    overflow: auto;
+    break-inside: auto;
+    border-spacing: 0;    
+    th, td {
+      padding: 5px 15px;
+      border: 1px double #cccccc;
+    }
+    tr {
+      border-top: 1px solid #cccccc;
+      background-color: white;
+      margin: 0;
+      padding: 0;
+    }
+    tr:nth-child(2n) {
+      background-color: #f8f8f8;
+    }
+    tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      text-align: left;
+      margin: 0;
+      padding: 6px 13px;
+    }
+
+    tr th:first-child,
+    tr td:first-child {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  @import 'code';
+
+  .read-more {
+    .read-more-link {
+      color: $theme-color;
+      font-size: 1.1em;
+      font-family: $global-serif-font-family;
+    
+      &:hover {
+        border-bottom: $post-readMore-border-bottom;
+      }
+    }
+  }
+}
